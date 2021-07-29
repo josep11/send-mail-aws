@@ -2,20 +2,27 @@
 
 Send email on AWS SES and expose a CLI interface
 
-## Configure the environment
+## Install and Configure the environment
+
+### Prerequisites
 
 1. Create an IAM user and give it access to SES API
+2. Install node.js
+
+### Install
+
+1. ```git clone https://github.com/josep11/aws-ses-clu```
 2. Copy the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY into .env file
 3. run
 
 ```bash
-node send_email.js -h
-node send_email.js title "content"
+./send-mail-aws -h
+./send-mail-aws title "content"
 ```
 
 ## To install it on a new computer as a command
 
-Add this function to .bash_profile or equivalentes with the root of the directory:
+Add this function to .bash_profile or equivalentes with the root of the directory accordingly:
 
 ```bash
 function send-mail-aws(){
