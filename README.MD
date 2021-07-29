@@ -25,12 +25,19 @@ Send email on AWS SES and expose a CLI interface
 
 Add this function to .bash_profile or equivalentes with the root of the directory accordingly:
 
+cd into the directory and run:
+
 ```bash
+npm install -g ./
+<!-- npm install -g $(pwd) -->
+```
+
+<!-- ```bash
 function send-mail-aws(){
  SEND_MAIL_AWS_ROOT=$HOME/node/aws/aws-ses
  $SEND_MAIL_AWS_ROOT/send-mail-aws $@
 }
-```
+``` -->
 
 Then you can run it like a global command:
 

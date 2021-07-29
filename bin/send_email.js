@@ -1,4 +1,6 @@
+#!/usr/bin/env node
 const argv = require('yargs').argv;
+// console.log(`clu running on ${process.cwd()}`);
 
 const printHelp = function () {
     process.stdout.write("\nUSAGE: \n");
@@ -16,7 +18,7 @@ if (argv.h || !subject) { //help or malformed command
 let { body, b } = argv;
 body = body || b || 'Default email content';
 
-const { sendEmail } = require('./utils/AWS_SES_Wrapper');
+const { sendEmail } = require('../lib/AWS_SES_Wrapper');
 (async () => {
     await sendEmail(subject, body);
 })();
