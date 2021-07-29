@@ -12,8 +12,9 @@ Send email on AWS SES and expose a CLI interface
 ### Install
 
 1. ```git clone https://github.com/josep11/aws-ses-clu```
-2. Copy the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY into .env file
-3. run
+2. ```npm install```
+3. Copy the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY into .env file
+4. run
 
 ```bash
 ./send-mail-aws -h

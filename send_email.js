@@ -14,7 +14,7 @@ if (!process.env.AWS_ACCESS_KEY_ID ||
 
 const printHelp = function () {
     process.stdout.write("\nUSAGE: \n");
-    process.stdout.write('node send_email.js <title> [body] [-h]\n');
+    process.stdout.write('send-mail-aws <title> [body] [-h]\n');
 };
 
 if (argv.h) {
@@ -57,12 +57,12 @@ const params = {
             // },
             Text: {
                 Charset: 'UTF-8',
-                Data: 'TEXT_FORMAT_BODY',
+                Data: content,
             },
         },
         Subject: {
             Charset: 'UTF-8',
-            Data: 'Test email',
+            Data: subject,
         },
     },
     Source: source, /* required */
