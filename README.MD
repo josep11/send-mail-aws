@@ -18,7 +18,7 @@ Send email on AWS SES and expose a CLI interface
 
 ```bash
 ./send-mail-aws -h
-./send-mail-aws title "content"
+./send-mail-aws -s "Email Subject" [-b "Content"]
 ```
 
 ## To install it on a new computer as a command
@@ -35,5 +35,6 @@ function send-mail-aws(){
 Then you can run it like a global command:
 
 ```bash
-send-mail-aws SUBJECT_TITLE "CONTINGUT AMB ESPAIS"
+send-mail-aws -s "SUBJECT TITLE" [-b "CONTINGUT AMB ESPAIS"]
+send-mail-aws --subject="SUBJECT TITLE" [--body="CONTINGUT AMB ESPAIS"]
 ```
