@@ -4,7 +4,7 @@ const argv = require('yargs').argv;
 
 const printHelp = function () {
     process.stdout.write("\nUSAGE: \n");
-    process.stdout.write('send-mail-aws --subject=<title> [--body=body] [-h]\n');
+    process.stdout.write('send-mail-aws -s <title> [-b body] [-h]\n');
     process.stdout.write('send-mail-aws --subject=<title> [--body=body] [-h]\n');
 };
 
