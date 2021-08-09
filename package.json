@@ -1,7 +1,7 @@
 {
-  "name": "aws-ses",
+  "name": "send-mail-aws",
   "version": "2.0.0",
-  "description": "",
+  "description": "Command Line Utility To Send Emails With AWS",
   "main": "./lib/AWS_SES_Wrapper.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
