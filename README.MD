@@ -41,6 +41,14 @@ npm ls -g --depth=0
 ~/.nvm/versions/node/v12.18.4/lib
 ```
 
+#### If you migrate into a new default node version
+
+```bash
+nvm alias default 14.*
+```
+
+Then repeat the 4th step on [install](#install)
+
 ### To install only locally
 
 Skip step 4 from [Install section](#Install) section and run from the folder:
