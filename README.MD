@@ -20,7 +20,7 @@ send-mail-aws --subject="SUBJECT TITLE" [--body="CONTINGUT AMB ESPAIS"]
 
 1. ```git clone https://github.com/josep11/send-mail-aws```
 2. ```npm install```
-3. Copy the AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY into .env file
+3. `cp .env.example .env` and then configure with your current AWS profile
 4. Install it as a global command.
 
 ```bash
