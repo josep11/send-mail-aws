@@ -51,7 +51,7 @@ Then repeat the 4th step on [install](#install)
 
 ### To install only locally
 
-Skip step 4 from [Install section](#Install) section and run from the folder:
+Skip step 4 from [Install section](#install) section and run from the folder:
 
 ```bash
 ./send-mail-aws -h
