@@ -4,7 +4,7 @@
   "description": "Command Line Utility To Send Emails With AWS",
   "main": "./lib/AWS_SES_Wrapper.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/*test* -b --exit --colors --timeout 50000"
   },
   "bin": {
     "send-mail-aws": "./bin/send_email.js"
@@ -19,5 +19,8 @@
     "aws-sdk": "^2.1282.0",
     "dotenv": "^16.0.3",
     "yargs": "^17.6.2"
-  }
+  },
+  "devDependencies": {
+		"mocha": "^10.1.0"
+	}
 }
