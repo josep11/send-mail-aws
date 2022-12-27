@@ -4,7 +4,10 @@
   "description": "Command Line Utility To Send Emails With AWS",
   "main": "./lib/AWS_SES_Wrapper.js",
   "scripts": {
-    "test": "mocha test/*test* -b --exit --colors --timeout 50000"
+    "test": "mocha test/*test* -b --exit --colors"
+  },
+  "mocha": {
+    "timeout": 50000
   },
   "bin": {
     "send-mail-aws": "./bin/send_email.js"
