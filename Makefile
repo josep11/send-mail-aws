@@ -42,7 +42,12 @@ node_modules: package.json
 
 ## Run git tag picking the version from package.json
 tag:
-	git tag "v$$(node -e 'console.log(require("./package").version)')"
+	git tag "$$(node -e 'console.log(require("./package").version)')"
+
+.PHONY: list
+## Lists all targets defined in this makefile.
+list:
+	@$(MAKE) -pRrn : -f $(MAKEFILE_LIST) 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | command grep -v -e '^[^[:alnum:]]' -e '^$@$$command ' | sort
 
 .PHONY: tag 
 .PHONY: all install node_modules
