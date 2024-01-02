@@ -31,10 +31,10 @@ npm install -g ./
 ### To uninstall global
 
 ```bash
-npm uninstall -g send-email-aws
+npm uninstall -g send-mail-aws
 # If it doesn't work:
-which send-email-aws
-# cd to that location delete the symbolic link and then cd to the installed location and rm -rf send-email-aws folder
+which send-mail-aws
+# cd to that location delete the symbolic link and then cd to the installed location and rm -rf send-mail-aws folder
 # Now it should not be visible:
 npm ls -g --depth=0
 # Otherwise rm the link on:
