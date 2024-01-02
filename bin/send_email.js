@@ -20,6 +20,7 @@ body = body || b || 'Default email content';
 
 const { sendEmail } = require('../lib/AWS_SES_Wrapper');
 (async () => {
+    // TODO: receiver
     await sendEmail(subject, body);
 })();
 
