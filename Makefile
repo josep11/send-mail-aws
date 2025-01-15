@@ -30,24 +30,29 @@ help:
 	{ lastLine = $$0 }' $(MAKEFILE_LIST) | sort -u
 	@printf "\n"
 
-install: node_modules
 
-node_modules: package.json
-	@NODE_ENV= $(PKG) install
-	@touch node_modules
+## Install the dependencies
+npm/i:
+	npm i
 
-# Example how to get a command execution into a variable and use it in the same line
-# pack:
-# @file=$$(npm ls); echo "$$file";
+## Run npm audit
+npm/audit:
+	npm audit
+
+## Run npm audit fix (force)
+npm/audit-fix:
+	npm audit fix --force
 
 ## Run git tag picking the version from package.json
 tag:
 	git tag "$$(node -e 'console.log(require("./package").version)')"
 
-.PHONY: list
+## Push tags to the remote repository
+posttag:
+	git push && git push --tags
+
 ## Lists all targets defined in this makefile.
 list:
 	@$(MAKE) -pRrn : -f $(MAKEFILE_LIST) 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | command grep -v -e '^[^[:alnum:]]' -e '^$@$$command ' | sort
 
-.PHONY: tag 
-.PHONY: all install node_modules
+.PHONY: list tag
