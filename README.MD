@@ -44,7 +44,7 @@ npm ls -g --depth=0
 #### If you migrate into a new default node version
 
 ```bash
-nvm alias default 14.*
+nvm alias default 22.*
 ```
 
 Then repeat the 4th step on [install](#install)
