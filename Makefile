@@ -56,3 +56,7 @@ list:
 	@$(MAKE) -pRrn : -f $(MAKEFILE_LIST) 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | command grep -v -e '^[^[:alnum:]]' -e '^$@$$command ' | sort
 
 .PHONY: list tag
+
+## Run update deps for all of them
+update-deps:
+	ncu -x winston-daily-rotate-file -u && npm i && npm test
