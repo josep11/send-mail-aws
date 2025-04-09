@@ -19,11 +19,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@aws-sdk/client-ses": "^3.782.0",
     "aws-sdk": "^2.1692.0",
     "dotenv": "^16.4.7",
     "yargs": "^17.7.2"
   },
   "devDependencies": {
-		"mocha": "^10.2.0"
-	}
+    "@aws-sdk/types": "^3.775.0",
+    "mocha": "^10.2.0"
+  }
 }
