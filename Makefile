@@ -43,6 +43,14 @@ npm/audit:
 npm/audit-fix:
 	npm audit fix --force
 
+## Lint
+lint:
+	npm run lint
+
+## Lint and fix errors
+lint-fix:
+	npm run lint:fix
+
 ## Run git tag picking the version from package.json
 tag:
 	git tag "$$(node -e 'console.log(require("./package").version)')"
