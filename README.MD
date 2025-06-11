@@ -25,7 +25,7 @@ send-mail-aws --subject="SUBJECT TITLE" [--body="CONTINGUT AMB ESPAIS"]
 
 ```bash
 # cd into the directory and run:
-npm install -g ./
+make install-bin
 ```
 
 ### To uninstall global

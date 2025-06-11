@@ -68,3 +68,7 @@ list:
 ## Run update deps for all of them
 update-deps:
 	ncu -x winston-daily-rotate-file -u && npm i && npm test
+
+## Install the binary system-wide
+install-bin:
+	npm install -g ./
