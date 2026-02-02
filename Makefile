@@ -1,6 +1,7 @@
 # get Makefile directory name: http://stackoverflow.com/a/5982798/376773
 THIS_MAKEFILE_PATH:=$(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))
 THIS_DIR:=$(shell cd $(dir $(THIS_MAKEFILE_PATH));pwd)
+BASENAME:=$(shell basename ${THIS_DIR})
 
 # BIN directory
 BIN := $(THIS_DIR)/node_modules/.bin
@@ -70,5 +71,9 @@ update-deps:
 	ncu -x winston-daily-rotate-file -u && npm i && npm test
 
 ## Install the binary system-wide
-install-bin:
+bin/install:
 	npm install -g ./
+
+## Uninstall the binary system-wide
+bin/uninstall:
+	npm uninstall -g ${BASENAME}
