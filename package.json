@@ -22,7 +22,7 @@
   "license": "ISC",
   "dependencies": {
     "@aws-sdk/client-ses": "^3.893.0",
-    "aws-sdk": "^1.18.0",
+    "aws-sdk": "^2.1693.0",
     "dotenv": "^16.4.7",
     "yargs": "^17.7.2"
   },
